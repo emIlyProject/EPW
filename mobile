@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desain Canvas Mobile</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="800" style="border:1px solid #000000;"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#333333";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#008000"; 
+        ctx.fillRect(0, 750, canvas.width, 100);
+
+        ctx.fillStyle = "#0000FF"; 
+        ctx.beginPath();
+        ctx.arc(25, 775, 25, 0, Math.PI * 2, true); 
+        ctx.fill();
+
+        ctx.fillStyle = "#FFFF00";
+        ctx.fillRect(300, 700, 100, 100); 
+        ctx.fillStyle = "#0000FF";
+        ctx.beginPath();
+        ctx.arc(350, 750, 25, 0, Math.PI * 2, true); 
+        ctx.fill();
+
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 650, 50, 100); 
+
+        ctx.fillStyle = "#FFA500"; 
+        var size = 50;
+        ctx.fillRect(100, 200, size, size); 
+        ctx.fillRect(225, 200, size, size); 
+        ctx.fillRect(100, 300, size, size);
+        ctx.fillRect(225, 300, size, size); 
+    </script>
+</body>
+</html>
