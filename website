@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desain Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Set background color
+        ctx.fillStyle = "#333333"; // Warna latar belakang abu-abu gelap
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Draw green rectangle at the bottom
+        ctx.fillStyle = "#008000"; // Warna hijau
+        ctx.fillRect(0, 500, canvas.width, 100);
+
+        // Draw blue circles
+        ctx.fillStyle = "#0000FF"; // Warna biru
+        ctx.beginPath();
+        ctx.arc(50, 550, 50, 0, Math.PI * 2, true); // Lingkaran biru di kiri bawah
+        ctx.fill();
+
+        // Draw larger yellow square at the bottom right
+        ctx.fillStyle = "#FFFF00"; // Warna kuning untuk persegi di kanan bawah
+        ctx.fillRect(650, 450, 150, 150); // Persegi kuning lebih besar
+        ctx.fillStyle = "#0000FF"; // Warna biru untuk lingkaran di dalam persegi kuning
+        ctx.beginPath();
+        ctx.arc(725, 525, 40, 0, Math.PI * 2, true); // Lingkaran biru di kanan bawah, ukuran lebih kecil
+        ctx.fill();
+
+        // Draw orange squares
+        ctx.fillStyle = "#FFA500"; // Warna oranye
+        var size = 50;
+        ctx.fillRect(250, 150, size, size); // Persegi oranye kiri atas
+        ctx.fillRect(500, 150, size, size); // Persegi oranye kanan atas
+        ctx.fillRect(375, 235, size, size); // Persegi oranye tengah bawah
+        ctx.fillRect(375, 150, size, size); // Persegi oranye tengah atas
+    </script>
+</body>
+</html>
